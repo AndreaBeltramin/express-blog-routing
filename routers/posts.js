@@ -3,7 +3,8 @@ const router = express.Router();
 const blogPosts = require("../db/blogPosts.js");
 
 // rotta index
-// creo una rotta /bacheca che restituisce un oggetto json con la lista dei post e il conteggio partendo da un array
+// restituisce un oggetto json con la lista dei post
+// e il conteggio partendo da un array
 router.get("/", (req, res) => {
 	res.json([blogPosts, "il numero di post è: " + blogPosts.length]);
 });
